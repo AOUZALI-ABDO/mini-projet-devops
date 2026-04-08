@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Formation App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Formation App DevOps</h1>
+        <p>Application web simple avec Flask, SQLite et Docker</p>
+    </header>
+
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/formations">Formations</a>
+        <a href="/add">Ajouter</a>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>Mini-Projet DevOps - Flask + SQLite</p>
+    </footer>
+</body>
+</html>

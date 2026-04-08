@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Ajouter une formation{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Ajouter une nouvelle formation</h2>
+    <p>Complétez le formulaire ci-dessous.</p>
+
+    <form method="POST" action="/add">
+        <label for="titre"><strong>Titre :</strong></label><br>
+        <input type="text" id="titre" name="titre" required style="width:100%; padding:10px; margin:10px 0;"><br>
+
+        <label for="description"><strong>Description :</strong></label><br>
+        <textarea id="description" name="description" required style="width:100%; padding:10px; margin:10px 0; height:120px;"></textarea><br>
+
+        <label for="duree"><strong>Durée :</strong></label><br>
+        <input type="text" id="duree" name="duree" required style="width:100%; padding:10px; margin:10px 0;"><br>
+
+        <button class="btn" type="submit">Ajouter la formation</button>
+    </form>
+</div>
+{% endblock %}

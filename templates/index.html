@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - Formation App{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Bienvenue</h2>
+    <p>
+        Cette application web permet d’afficher et d’ajouter des formations
+        stockées dans une base de données SQLite avec Flask.
+    </p>
+    <p>
+        Ce projet s’inscrit dans le cadre du mini-projet DevOps :
+        développement, base de données, Docker, Docker Compose et CI/CD.
+    </p>
+    <a class="btn" href="/formations">Voir les formations</a>
+</div>
+{% endblock %}

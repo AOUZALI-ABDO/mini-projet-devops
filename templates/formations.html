@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Liste des formations{% endblock %}
+
+{% block content %}
+<h2>Liste des formations</h2>
+
+{% if formations %}
+    {% for formation in formations %}
+        <div class="card">
+            <h3>{{ formation.titre }}</h3>
+            <p>{{ formation.description }}</p>
+            <p><strong>Durée :</strong> {{ formation.duree }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card">
+        <p>Aucune formation disponible.</p>
+    </div>
+{% endif %}
+{% endblock %}
