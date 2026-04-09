@@ -3,19 +3,26 @@
 {% block title %}Liste des formations{% endblock %}
 
 {% block content %}
-<h2>Liste des formations</h2>
+<section class="page-head">
+    <h2>Liste des formations</h2>
+    <p>Consultez les formations disponibles avec leurs details.</p>
+</section>
 
 {% if formations %}
+<div class="formation-list">
     {% for formation in formations %}
-        <div class="card">
+    <article class="formation-item">
+        <div class="formation-item-head">
             <h3>{{ formation.titre }}</h3>
-            <p>{{ formation.description }}</p>
-            <p><strong>Durée :</strong> {{ formation.duree }}</p>
+            <span class="badge-duree">{{ formation.duree }}</span>
         </div>
+        <p>{{ formation.description }}</p>
+    </article>
     {% endfor %}
+</div>
 {% else %}
-    <div class="card">
-        <p>Aucune formation disponible.</p>
-    </div>
+<div class="card empty-state">
+    <p>Aucune formation disponible pour le moment.</p>
+</div>
 {% endif %}
 {% endblock %}
