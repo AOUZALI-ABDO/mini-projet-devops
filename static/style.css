@@ -91,6 +91,14 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
+.btn-danger {
+    background-color: #c0392b;
+}
+
+.btn-danger:hover {
+    background-color: #a93226;
+}
+
 .page-head {
     margin-bottom: 16px;
 }
@@ -133,6 +141,12 @@ nav a:hover {
 .formation-item p {
     margin: 0;
     color: var(--text-soft);
+}
+
+.formation-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .badge-duree {

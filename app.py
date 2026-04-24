@@ -16,6 +16,13 @@ def formations():
     formations_list = Formation.query.all()
     return render_template("formations.html", formations=formations_list)
 
+@app.route("/formations/<int:formation_id>/delete", methods=["POST"])
+def delete_formation(formation_id):
+    formation = Formation.query.get_or_404(formation_id)
+    db.session.delete(formation)
+    db.session.commit()
+    return redirect(url_for("formations"))
+
 @app.route("/add", methods=["GET", "POST"])
 def add_formation():
     if request.method == "POST":
